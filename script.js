@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => { // Added Event listener th
     form.addEventListener('submit', event => { // Adds an event listener to the form that triggers when the form is submitted.
         event.preventDefault(); // Prevents default action
         ['name', 'background-color', 'foreground-color'].forEach(id => // Begins a loop over an array containing the IDs name, background-color, and foreground-color.
-            localStorage.setItem(id, document.getElementById(id).value) // For each ID in the array, stores the corresponding value from the form in localStorage.
+            localStorage.setItem(id, document.getElementById(id).value) // Stores the value from the form in localStorage for each ID in the array.
         );
         applyPreferences(); // Calls the applyPreferences function
-        alert('Preferences saved!'); // Displays an alert notifying the user that their preferences have been saved.
+        alert('Preferences saved!'); // Notifies the user that the preferences have been saved
     });
 });
